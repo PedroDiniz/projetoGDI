@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml">
+  <!-- TODO Add Nodes -->
+  <children>
+    <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="800.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Cadastro">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Inserir" />
+            <MenuItem mnemonicParsing="false" text="Editar" />
+            <MenuItem mnemonicParsing="false" text="Remover" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Consultas">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Ficha Clínica" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ajuda">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <ToolBar layoutX="0.0" layoutY="24.0" prefWidth="800.0">
+      <items>
+        <Button mnemonicParsing="false" text="Button" />
+      </items>
+    </ToolBar>
+    <ToolBar layoutX="0.0" layoutY="55.0" prefWidth="800.0">
+      <items>
+        <Button mnemonicParsing="false" text="Button" />
+      </items>
+    </ToolBar>
+    <TabPane layoutX="0.0" layoutY="86.0" prefHeight="523.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Médico">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Paciente">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Servidor Geral">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Ficha de Atendimento">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Consulta">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
