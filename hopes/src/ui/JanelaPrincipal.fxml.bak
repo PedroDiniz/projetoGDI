@@ -3,8 +3,10 @@
 <?import java.lang.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="panePrincipal" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="ui.JanelaPrincipalController">
@@ -47,36 +49,48 @@
           <content>
             <AnchorPane id="Content" fx:id="paneTabPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <Text fill="#216600" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Médico">
+                <Text layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Médico">
+                  <fill>
+                    <Color blue="0.000" green="0.400" red="0.129" fx:id="x3" />
+                  </fill>
                   <font>
-                    <Font size="16.0" />
+                    <Font size="16.0" fx:id="x4" />
                   </font>
                 </Text>
                 <Text layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
-                <TextField layoutX="64.0" layoutY="70.0" prefWidth="513.0" />
+                <TextField layoutX="64.0" layoutY="70.0" prefWidth="563.0" />
                 <Text fx:id="cpfLabel" layoutX="15.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
                 <TextField layoutX="64.0" layoutY="99.0" prefWidth="228.0" />
                 <Text id="cpfLabel" fx:id="dataNascLabel" layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:" />
                 <Text layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:" />
-                <RadioButton layoutX="14.0" layoutY="175.0" mnemonicParsing="false" text="Masculino" />
-                <RadioButton layoutX="117.0" layoutY="175.0" mnemonicParsing="false" text="Feminino" />
-                <Text layoutX="12.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:" />
-                <TextField layoutX="65.0" layoutY="240.0" prefWidth="371.0" />
-                <Text id="cpfLabel" layoutX="12.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:" />
-                <TextField layoutX="65.0" layoutY="269.0" prefWidth="228.0" />
-                <Text fill="#086600" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Pessoais">
+                <ComboBox layoutX="65.0" layoutY="153.0" prefHeight="21.0" prefWidth="132.8623046875">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Feminino" />
+                      <String fx:value="Masculino" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text layoutX="12.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:" />
+                <TextField layoutX="65.0" layoutY="245.0" prefWidth="371.0" />
+                <Text id="cpfLabel" layoutX="12.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:" />
+                <TextField layoutX="65.0" layoutY="274.0" prefWidth="228.0" />
+                <Text layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Pessoais">
+                  <fill>
+                    <Color blue="0.000" green="0.400" red="0.031" fx:id="x2" />
+                  </fill>
                   <font>
                     <Font size="14.0" fx:id="x1" />
                   </font>
                 </Text>
-                <Text fill="#086600" font="$x1" layoutX="117.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço" />
-                <Separator layoutX="17.0" layoutY="199.0" prefWidth="769.0" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço" />
+                <Separator layoutX="17.0" layoutY="204.0" prefWidth="769.0" />
                 <Text id="cpfLabel" layoutX="327.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRM:" />
-                <TextField layoutX="368.0" layoutY="99.0" prefWidth="228.0" />
-                <Text id="cpfLabel" layoutX="310.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número:" />
-                <TextField layoutX="363.0" layoutY="269.0" prefWidth="73.0" />
-                <Text id="cpfLabel" layoutX="452.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UF:" />
-                <ComboBox layoutX="482.0" layoutY="270.0" promptText="Acre">
+                <TextField layoutX="399.0" layoutY="99.0" prefWidth="228.0" />
+                <Text id="cpfLabel" layoutX="310.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número:" />
+                <TextField layoutX="363.0" layoutY="274.0" prefWidth="73.0" />
+                <Text id="cpfLabel" layoutX="452.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UF:" />
+                <ComboBox layoutX="482.0" layoutY="275.0" promptText="Acre" visibleRowCount="7">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Acre" />
@@ -86,33 +100,426 @@
                       <String fx:value="Bahia" />
                       <String fx:value="Ceará" />
                       <String fx:value="Distrito Federal" />
+                      <String fx:value="Goiás" />
+                      <String fx:value="Espírito Santo" />
+                      <String fx:value="Maranhão" />
+                      <String fx:value="Mato Grosso" />
+                      <String fx:value="Mato Grosso do Sul" />
+                      <String fx:value="Minas Gerais" />
+                      <String fx:value="Pará" />
+                      <String fx:value="Paraíba" />
+                      <String fx:value="Pernambuco" />
+                      <String fx:value="Piauí" />
+                      <String fx:value="Rio de Janeiro" />
+                      <String fx:value="Rio Grande do Norte" />
+                      <String fx:value="Rio Grande do Sul" />
+                      <String fx:value="Rondônia" />
+                      <String fx:value="Roraima" />
+                      <String fx:value="São Paulo" />
+                      <String fx:value="Santa Catarina" />
+                      <String fx:value="Sergipe" />
+                      <String fx:value="Tocantins" />
                     </FXCollections>
                   </items>
                 </ComboBox>
-                <Text id="cpfLabel" layoutX="446.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento:" />
-                <TextField layoutX="499.0" layoutY="237.0" prefWidth="73.0" />
+                <Text id="cpfLabel" layoutX="446.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento:" />
+                <TextField layoutX="532.0" layoutY="242.0" prefWidth="94.8623046875" />
+                <ImageView fitHeight="111.00006040387494" fitWidth="148.0000762939453" layoutX="640.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                <Button layoutX="686.0" layoutY="89.0" mnemonicParsing="false" text="Foto" />
+                <Text layoutX="9.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Residencial:" />
+                <TextField layoutX="75.0" layoutY="352.0" prefWidth="148.0" />
+                <Text fill="$x2" font="$x1" layoutX="114.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefones" />
+                <Separator layoutX="14.0" layoutY="311.0" prefWidth="769.0" />
+                <Text layoutX="13.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:" />
+                <TextField layoutX="75.0" layoutY="382.0" prefWidth="148.0" />
+                <Text id="cpfLabel" layoutX="328.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supervisor:" />
+                <TextField layoutX="400.0" layoutY="133.0" prefWidth="228.0" />
+                <Text id="cpfLabel" layoutX="328.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                <CheckBox layoutX="329.0" layoutY="175.0" mnemonicParsing="false" text="Ativo" />
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
               </children>
             </AnchorPane>
           </content>
         </Tab>
         <Tab text="Paciente">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Text fill="$x3" font="$x4" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Paciente" />
+                <Text layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+                <TextField layoutX="64.0" layoutY="70.0" prefWidth="563.0" />
+                <Text layoutX="15.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
+                <TextField layoutX="64.0" layoutY="99.0" prefWidth="228.0" />
+                <Text id="cpfLabel" layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:" />
+                <Text layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:" />
+                <ComboBox layoutX="65.0" layoutY="153.0" prefHeight="21.0" prefWidth="132.8623046875">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Feminino" />
+                      <String fx:value="Masculino" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text layoutX="12.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:" />
+                <TextField layoutX="65.0" layoutY="245.0" prefWidth="371.0" />
+                <Text id="cpfLabel" layoutX="12.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:" />
+                <TextField layoutX="65.0" layoutY="274.0" prefWidth="228.0" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Pessoais" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço" />
+                <Separator layoutX="17.0" layoutY="204.0" prefWidth="769.0" />
+                <Text id="cpfLabel" layoutX="310.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número:" />
+                <TextField layoutX="363.0" layoutY="274.0" prefWidth="73.0" />
+                <Text id="cpfLabel" layoutX="452.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UF:" />
+                <ComboBox layoutX="482.0" layoutY="275.0" promptText="Acre" visibleRowCount="7">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Acre" />
+                      <String fx:value="Alagoas" />
+                      <String fx:value="Amapá" />
+                      <String fx:value="Amazonas" />
+                      <String fx:value="Bahia" />
+                      <String fx:value="Ceará" />
+                      <String fx:value="Distrito Federal" />
+                      <String fx:value="Goiás" />
+                      <String fx:value="Espírito Santo" />
+                      <String fx:value="Maranhão" />
+                      <String fx:value="Mato Grosso" />
+                      <String fx:value="Mato Grosso do Sul" />
+                      <String fx:value="Minas Gerais" />
+                      <String fx:value="Pará" />
+                      <String fx:value="Paraíba" />
+                      <String fx:value="Pernambuco" />
+                      <String fx:value="Piauí" />
+                      <String fx:value="Rio de Janeiro" />
+                      <String fx:value="Rio Grande do Norte" />
+                      <String fx:value="Rio Grande do Sul" />
+                      <String fx:value="Rondônia" />
+                      <String fx:value="Roraima" />
+                      <String fx:value="São Paulo" />
+                      <String fx:value="Santa Catarina" />
+                      <String fx:value="Sergipe" />
+                      <String fx:value="Tocantins" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text id="cpfLabel" layoutX="446.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento:" />
+                <TextField layoutX="532.0" layoutY="242.0" prefWidth="94.8623046875" />
+                <ImageView fitHeight="111.00006040387494" fitWidth="148.0000762939453" layoutX="640.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                <Button layoutX="686.0" layoutY="89.0" mnemonicParsing="false" text="Foto" />
+                <Text layoutX="9.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Residencial:" />
+                <TextField layoutX="75.0" layoutY="352.0" prefWidth="148.0" />
+                <Text fill="$x2" font="$x1" layoutX="114.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefones" />
+                <Separator layoutX="14.0" layoutY="311.0" prefWidth="769.0" />
+                <Text layoutX="13.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:" />
+                <TextField layoutX="75.0" layoutY="382.0" prefWidth="148.0" />
+                <Text id="cpfLabel" layoutX="328.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
         <Tab text="Servidor Geral">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Text fill="$x3" font="$x4" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Servidor Geral" />
+                <Text layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+                <TextField layoutX="64.0" layoutY="70.0" prefWidth="563.0" />
+                <Text layoutX="15.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
+                <TextField layoutX="64.0" layoutY="99.0" prefWidth="228.0" />
+                <Text id="cpfLabel" layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:" />
+                <Text layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:" />
+                <ComboBox layoutX="65.0" layoutY="153.0" prefHeight="21.0" prefWidth="132.8623046875">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Feminino" />
+                      <String fx:value="Masculino" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text layoutX="12.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:" />
+                <TextField layoutX="65.0" layoutY="245.0" prefWidth="371.0" />
+                <Text id="cpfLabel" layoutX="12.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:" />
+                <TextField layoutX="65.0" layoutY="274.0" prefWidth="228.0" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Pessoais" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço" />
+                <Separator layoutX="17.0" layoutY="204.0" prefWidth="769.0" />
+                <Text id="cpfLabel" layoutX="310.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número:" />
+                <TextField layoutX="363.0" layoutY="274.0" prefWidth="73.0" />
+                <Text id="cpfLabel" layoutX="452.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UF:" />
+                <ComboBox layoutX="482.0" layoutY="275.0" promptText="Acre" visibleRowCount="7">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Acre" />
+                      <String fx:value="Alagoas" />
+                      <String fx:value="Amapá" />
+                      <String fx:value="Amazonas" />
+                      <String fx:value="Bahia" />
+                      <String fx:value="Ceará" />
+                      <String fx:value="Distrito Federal" />
+                      <String fx:value="Goiás" />
+                      <String fx:value="Espírito Santo" />
+                      <String fx:value="Maranhão" />
+                      <String fx:value="Mato Grosso" />
+                      <String fx:value="Mato Grosso do Sul" />
+                      <String fx:value="Minas Gerais" />
+                      <String fx:value="Pará" />
+                      <String fx:value="Paraíba" />
+                      <String fx:value="Pernambuco" />
+                      <String fx:value="Piauí" />
+                      <String fx:value="Rio de Janeiro" />
+                      <String fx:value="Rio Grande do Norte" />
+                      <String fx:value="Rio Grande do Sul" />
+                      <String fx:value="Rondônia" />
+                      <String fx:value="Roraima" />
+                      <String fx:value="São Paulo" />
+                      <String fx:value="Santa Catarina" />
+                      <String fx:value="Sergipe" />
+                      <String fx:value="Tocantins" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text id="cpfLabel" layoutX="446.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento:" />
+                <TextField layoutX="532.0" layoutY="242.0" prefWidth="94.8623046875" />
+                <ImageView fitHeight="111.00006040387494" fitWidth="148.0000762939453" layoutX="640.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                <Button layoutX="686.0" layoutY="89.0" mnemonicParsing="false" text="Foto" />
+                <Text layoutX="9.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Residencial:" />
+                <TextField layoutX="75.0" layoutY="352.0" prefWidth="148.0" />
+                <Text fill="$x2" font="$x1" layoutX="114.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefones" />
+                <Separator layoutX="14.0" layoutY="311.0" prefWidth="769.0" />
+                <Text layoutX="13.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:" />
+                <TextField layoutX="75.0" layoutY="382.0" prefWidth="148.0" />
+                <Text id="cpfLabel" layoutX="328.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                <Text layoutX="336.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matrícula:" />
+                <TextField layoutX="401.0" layoutY="102.0" prefWidth="226.0" />
+                <CheckBox layoutX="336.0" layoutY="137.0" mnemonicParsing="false" prefWidth="86.0" text="Ativo" />
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
-        <Tab text="Ficha de Atendimento">
+        <Tab text="Acompanhante">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Text fill="$x3" font="$x4" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Acompanhante" />
+                <Text layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+                <TextField layoutX="64.0" layoutY="70.0" prefWidth="563.0" />
+                <Text layoutX="15.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
+                <TextField layoutX="64.0" layoutY="99.0" prefWidth="228.0" />
+                <Text id="cpfLabel" layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:" />
+                <Text layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:" />
+                <ComboBox layoutX="65.0" layoutY="153.0" prefHeight="21.0" prefWidth="132.8623046875">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Feminino" />
+                      <String fx:value="Masculino" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text layoutX="12.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:" />
+                <TextField layoutX="65.0" layoutY="245.0" prefWidth="371.0" />
+                <Text id="cpfLabel" layoutX="12.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:" />
+                <TextField layoutX="65.0" layoutY="274.0" prefWidth="228.0" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Pessoais" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço" />
+                <Separator layoutX="17.0" layoutY="204.0" prefWidth="769.0" />
+                <Text id="cpfLabel" layoutX="310.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número:" />
+                <TextField layoutX="363.0" layoutY="274.0" prefWidth="73.0" />
+                <Text id="cpfLabel" layoutX="452.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UF:" />
+                <ComboBox layoutX="482.0" layoutY="275.0" promptText="Acre" visibleRowCount="7">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Acre" />
+                      <String fx:value="Alagoas" />
+                      <String fx:value="Amapá" />
+                      <String fx:value="Amazonas" />
+                      <String fx:value="Bahia" />
+                      <String fx:value="Ceará" />
+                      <String fx:value="Distrito Federal" />
+                      <String fx:value="Goiás" />
+                      <String fx:value="Espírito Santo" />
+                      <String fx:value="Maranhão" />
+                      <String fx:value="Mato Grosso" />
+                      <String fx:value="Mato Grosso do Sul" />
+                      <String fx:value="Minas Gerais" />
+                      <String fx:value="Pará" />
+                      <String fx:value="Paraíba" />
+                      <String fx:value="Pernambuco" />
+                      <String fx:value="Piauí" />
+                      <String fx:value="Rio de Janeiro" />
+                      <String fx:value="Rio Grande do Norte" />
+                      <String fx:value="Rio Grande do Sul" />
+                      <String fx:value="Rondônia" />
+                      <String fx:value="Roraima" />
+                      <String fx:value="São Paulo" />
+                      <String fx:value="Santa Catarina" />
+                      <String fx:value="Sergipe" />
+                      <String fx:value="Tocantins" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text id="cpfLabel" layoutX="446.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento:" />
+                <TextField layoutX="532.0" layoutY="242.0" prefWidth="94.8623046875" />
+                <ImageView fitHeight="111.00006040387494" fitWidth="148.0000762939453" layoutX="640.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                <Button layoutX="686.0" layoutY="89.0" mnemonicParsing="false" text="Foto" />
+                <Text layoutX="9.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Residencial:" />
+                <TextField layoutX="75.0" layoutY="352.0" prefWidth="148.0" />
+                <Text fill="$x2" font="$x1" layoutX="114.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefones" />
+                <Separator layoutX="14.0" layoutY="311.0" prefWidth="769.0" />
+                <Text layoutX="13.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:" />
+                <TextField layoutX="75.0" layoutY="382.0" prefWidth="148.0" />
+                <Text id="cpfLabel" layoutX="328.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                <Text layoutX="336.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vínculo Afetivo:" />
+                <TextField layoutX="422.0" layoutY="99.0" prefWidth="205.0" />
+                <Text layoutX="333.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paciente Associado:" />
+                <ComboBox layoutX="447.0" layoutY="132.0" prefHeight="21.0" prefWidth="180.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Feminino" />
+                      <String fx:value="Masculino" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
-        <Tab text="Consulta">
+        <Tab fx:id="tabPaneFichaAten" text="Ficha de Atendimento">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane id="Content" fx:id="paneTabPaneFichaAten" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Text fill="$x3" font="$x4" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Ficha Atendimento" />
+                <Text fx:id="dataHoraEntrada" layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data e hora de entrada:" />
+                <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matrícula do Servidor:" />
+                <Text id="cpfLabel" layoutX="14.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF do Paciente:" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Gerais" />
+                <ComboBox layoutX="146.0" layoutY="111.0" prefHeight="21.0" prefWidth="186.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox layoutX="147.0" layoutY="145.0" prefHeight="21.0" prefWidth="186.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text id="cpfLabel" layoutX="14.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID FIcha Clínica:" />
+                <ComboBox layoutX="147.0" layoutY="181.0" prefHeight="21.0" prefWidth="186.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabPaneConsulta" text="Consulta">
+          <content>
+            <AnchorPane id="Content" fx:id="paneTabPaneConsulta" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Text layoutX="375.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matrícula do Servidor:" />
+                <Text id="cpfLabel" layoutX="375.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF do Paciente:" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Gerais" />
+                <ComboBox layoutX="507.0" layoutY="71.0" prefHeight="21.0" prefWidth="186.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox layoutX="508.0" layoutY="105.0" prefHeight="21.0" prefWidth="186.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text id="cpfLabel" layoutX="375.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Enfermaria:" />
+                <ComboBox layoutX="508.0" layoutY="141.0" prefHeight="21.0" prefWidth="186.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text fill="$x3" font="$x4" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Consulta" />
+                <Text fx:id="dataEntrada" layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Entrada:" />
+                <Text fx:id="dataSaida" layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Saída:" />
+                <Text fx:id="dataPrevisaoAlta" layoutX="14.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Previsão de Alta:" />
+                <Text layoutX="14.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico:" />
+                <TextArea layoutX="90.0" layoutY="186.0" prefWidth="379.7578125" wrapText="true" />
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Enfermaria">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Text fill="$x3" font="$x4" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Enfermaria" />
+                <Text layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de Leitos:" />
+                <TextField layoutX="198.0" layoutY="70.0" prefWidth="81.4091796875" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Gerais" />
+                <Text layoutX="15.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de Leitos Ocupados:" />
+                <TextField layoutX="198.0" layoutY="105.0" prefWidth="81.4091796875" />
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Ficha Clínica">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Text fill="$x3" font="$x4" layoutX="341.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Ficha Clínica" />
+                <Text layoutX="15.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                <Text layoutX="14.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grau:" />
+                <Text fill="$x2" font="$x1" layoutX="117.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Gerais" />
+                <ComboBox layoutX="55.0" layoutY="71.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="0" />
+                      <String fx:value="1" />
+                      <String fx:value="2" />
+                      <String fx:value="3" />
+                      <String fx:value="4" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Text layoutX="151.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+                <ComboBox layoutX="199.0" layoutY="71.0" prefHeight="21.0" prefWidth="92.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Ativo" />
+                      <String fx:value="Inativo" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Button layoutX="380.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.8623046875" text="CADASTRAR" />
+              </children>
+            </AnchorPane>
           </content>
         </Tab>
       </tabs>
